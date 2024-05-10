@@ -1,0 +1,2 @@
+class Vitima < ApplicationRecord
+end
