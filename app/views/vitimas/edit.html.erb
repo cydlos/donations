@@ -1,2 +1,27 @@
-<h1>Vitimas#edit</h1>
-<p>Find me in app/views/vitimas/edit.html.erb</p>
+<h1><%= action_name == 'new' ? 'Adicionar Vítima' : 'Editar Vítima' %></h1>
+
+<%= form_with model: @vitima, local: true do |form| %>
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :necessidade %>
+    <%= form.text_area :necessidade %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Salvar', class: 'btn btn-primary' %>
+  </div>
+<% end %>
