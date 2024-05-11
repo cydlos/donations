@@ -1,14 +1,22 @@
-<h1><%= action_name == 'new' ? 'Adicionar Doador' : 'Editar Doador' %></h1>
-
+<h1>Cadastrar Doador</h1>
 <%= form_with model: @doador, local: true do |form| %>
-  <div class="field">
+  <div>
     <%= form.label :nome %>
     <%= form.text_field :nome %>
   </div>
-
-  <div class="field">
+  <div>
     <%= form.label :telefone %>
     <%= form.text_field :telefone %>
   </div>
-
-  <
+  <div>
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco %>
+  </div>
+  <div>
+    <%= form.label :ofertas %>
+    <%= form.text_field :ofertas %>
+  </div>
+  <div>
+    <%= form.submit 'Cadastrar' %>
+  </div>
+<% end %>

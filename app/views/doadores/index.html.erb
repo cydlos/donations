@@ -1,6 +1,4 @@
-<h1>Doadores</h1>
-<%= link_to 'Adicionar Doador', new_doador_path, class: 'btn btn-primary' %>
-
+<h1>Lista de Doadores</h1>
 <table>
   <thead>
     <tr>
@@ -19,8 +17,7 @@
         <td><%= doador.endereco %></td>
         <td><%= doador.ofertas %></td>
         <td>
-          <%= link_to 'Editar', edit_doador_path(doador), class: 'btn btn-secondary' %>
-          <%= link_to 'Excluir', doador_path(doador), method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-danger' %>
+          <%= link_to 'Excluir', doador_path(doador, token: doador.token), method: :delete, data: { confirm: 'Tem certeza?' } %>
         </td>
       </tr>
     <% end %>
